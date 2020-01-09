@@ -1,0 +1,10 @@
+/home/admin-ubuntu/Desktop/CrossCompilingRust/target/arm-unknown-linux-gnueabihf/debug/deps/crossbeam_queue-cfaeee49cb0330d5.rmeta: /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/crossbeam-queue-0.1.2/src/lib.rs /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/crossbeam-queue-0.1.2/src/array_queue.rs /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/crossbeam-queue-0.1.2/src/err.rs /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/crossbeam-queue-0.1.2/src/seg_queue.rs
+
+/home/admin-ubuntu/Desktop/CrossCompilingRust/target/arm-unknown-linux-gnueabihf/debug/deps/libcrossbeam_queue-cfaeee49cb0330d5.rlib: /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/crossbeam-queue-0.1.2/src/lib.rs /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/crossbeam-queue-0.1.2/src/array_queue.rs /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/crossbeam-queue-0.1.2/src/err.rs /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/crossbeam-queue-0.1.2/src/seg_queue.rs
+
+/home/admin-ubuntu/Desktop/CrossCompilingRust/target/arm-unknown-linux-gnueabihf/debug/deps/crossbeam_queue-cfaeee49cb0330d5.d: /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/crossbeam-queue-0.1.2/src/lib.rs /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/crossbeam-queue-0.1.2/src/array_queue.rs /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/crossbeam-queue-0.1.2/src/err.rs /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/crossbeam-queue-0.1.2/src/seg_queue.rs
+
+/home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/crossbeam-queue-0.1.2/src/lib.rs:
+/home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/crossbeam-queue-0.1.2/src/array_queue.rs:
+/home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/crossbeam-queue-0.1.2/src/err.rs:
+/home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/crossbeam-queue-0.1.2/src/seg_queue.rs:

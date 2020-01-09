@@ -1,0 +1,11 @@
+/home/admin-ubuntu/Desktop/CrossCompilingRust/target/arm-unknown-linux-gnueabihf/debug/deps/time-b09cfb294f8a8b02.rmeta: /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/time-0.1.42/src/lib.rs /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/time-0.1.42/src/display.rs /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/time-0.1.42/src/duration.rs /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/time-0.1.42/src/parse.rs /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/time-0.1.42/src/sys.rs
+
+/home/admin-ubuntu/Desktop/CrossCompilingRust/target/arm-unknown-linux-gnueabihf/debug/deps/libtime-b09cfb294f8a8b02.rlib: /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/time-0.1.42/src/lib.rs /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/time-0.1.42/src/display.rs /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/time-0.1.42/src/duration.rs /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/time-0.1.42/src/parse.rs /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/time-0.1.42/src/sys.rs
+
+/home/admin-ubuntu/Desktop/CrossCompilingRust/target/arm-unknown-linux-gnueabihf/debug/deps/time-b09cfb294f8a8b02.d: /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/time-0.1.42/src/lib.rs /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/time-0.1.42/src/display.rs /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/time-0.1.42/src/duration.rs /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/time-0.1.42/src/parse.rs /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/time-0.1.42/src/sys.rs
+
+/home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/time-0.1.42/src/lib.rs:
+/home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/time-0.1.42/src/display.rs:
+/home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/time-0.1.42/src/duration.rs:
+/home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/time-0.1.42/src/parse.rs:
+/home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/time-0.1.42/src/sys.rs:

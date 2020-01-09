@@ -1,0 +1,1 @@
+{"rustc":7569484026973864557,"features":"[\"alloc\", \"std\"]","target":174096327078571220,"profile":9935990280773120926,"path":7204199628679129261,"deps":[],"local":[{"CheckDepInfo":{"dep_info":"arm-unknown-linux-gnueabihf/debug/.fingerprint/futures-task-5ff360d9bf03d0c1/dep-lib-futures_task-5ff360d9bf03d0c1"}}],"rustflags":[],"metadata":1917790828497466686}

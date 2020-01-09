@@ -1,0 +1,11 @@
+/home/admin-ubuntu/Desktop/CrossCompilingRust/target/arm-unknown-linux-gnueabihf/debug/deps/httparse-f02e660402eabf97.rmeta: /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.3.4/src/lib.rs /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.3.4/src/iter.rs /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.3.4/src/macros.rs /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.3.4/src/simd/mod.rs /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.3.4/src/simd/fallback.rs
+
+/home/admin-ubuntu/Desktop/CrossCompilingRust/target/arm-unknown-linux-gnueabihf/debug/deps/libhttparse-f02e660402eabf97.rlib: /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.3.4/src/lib.rs /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.3.4/src/iter.rs /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.3.4/src/macros.rs /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.3.4/src/simd/mod.rs /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.3.4/src/simd/fallback.rs
+
+/home/admin-ubuntu/Desktop/CrossCompilingRust/target/arm-unknown-linux-gnueabihf/debug/deps/httparse-f02e660402eabf97.d: /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.3.4/src/lib.rs /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.3.4/src/iter.rs /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.3.4/src/macros.rs /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.3.4/src/simd/mod.rs /home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.3.4/src/simd/fallback.rs
+
+/home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.3.4/src/lib.rs:
+/home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.3.4/src/iter.rs:
+/home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.3.4/src/macros.rs:
+/home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.3.4/src/simd/mod.rs:
+/home/admin-ubuntu/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.3.4/src/simd/fallback.rs:
