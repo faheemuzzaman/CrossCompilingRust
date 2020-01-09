@@ -1,55 +1,70 @@
-#![feature(proc_macro_hygiene, decl_macro)]
-#[macro_use] extern crate rocket;
-extern crate reqwest;
-use std::collections::HashMap;
-use std::error::Error;
-use std::io::prelude::*;
-use std::fs::File;
-use std::path::Path;
+use {
+    hyper::{
+        // Miscellaneous types from Hyper for working with HTTP.
+        Body, Client, Request, Response, Server, Uri,
 
-extern crate rustc_serialize;
-use rustc_serialize::json::Json;
-use std::io::Read;
+        // This function turns a closure which returns a future into an
+        // implementation of the the Hyper `Service` trait, which is an
+        // asynchronous function from a generic `Request` to a `Response`.
+        service::service_fn,
 
-#[get("/")]
-fn hello()-> String{
+        // A function which runs a future to completion using the Hyper runtime.
+        rt::run,
+    },
+    futures::{
+        // Extension trait for futures 0.1 futures, adding the `.compat()` method
+        // which allows us to use `.await` on 0.1 futures.
+        compat::Future01CompatExt,
+        // Extension traits providing additional methods on futures.
+        // `FutureExt` adds methods that work for all futures, whereas
+        // `TryFutureExt` adds methods to futures that return `Result` types.
+        future::{FutureExt, TryFutureExt},
+    },
+    std::net::SocketAddr,
+};
 
-    let path =  Path::new("api.json");
-    let display = path.display();
+async fn serve_req(_req: Request<Body>) -> Result<Response<Body>, hyper::Error> {
+    // Always return successfully with a response containing a body with
+    // a friendly greeting ;)
+    Ok(Response::new(Body::from("hello, world!")))
+}
 
-    print!("{:?},{}",path,display);
+async fn run_server(addr: SocketAddr) {
+    println!("Listening on http://{}", addr);
 
-    let mut file = match File::create(path){
-        Err(why) => panic!("couldn't create {}: {}",display,why.description()),
-        Ok(file) => file,
-    };
+    // Create a server bound on the provided address
+    let serve_future = Server::bind(&addr)
+        // Serve requests using our `async serve_req` function.
+        // `serve` takes a closure which returns a type implementing the
+        // `Service` trait. `service_fn` returns a value implementing the
+        // `Service` trait, and accepts a closure which goes from request
+        // to a future of the response. To use our `serve_req` function with
+        // Hyper, we have to box it and put it in a compatability
+        // wrapper to go from a futures 0.3 future (the kind returned by
+        // `async fn`) to a futures 0.1 future (the kind used by Hyper).
+        .serve(|| service_fn(|req| serve_req(req).boxed().compat()));
 
-    match reqwest::get("http://api.weatherstack.com/current?access_key=d24ddee8ec749c2a34da5b76645d9d0f&query=Karachi") {
-        Ok(mut response)=>{            
-            match response.text() {
-                Ok(text)=> match file.write_all(text.as_bytes()){
-                                Err(why) => {panic!("couldn't write to {}: {}", display,why.description())},
-                                Ok(_) => println!("successfully wrote to {}", display)},
-                Err(_) => println!("Error in Text"),
-            }                    
-        },
-        Err(_)=> println!("Server Down")
-    }    
-
-    let mut file = match File::open(&path) {
-        Err(why) => panic!("couldn't open {}: {}", display,
-                                                   why.description()),
-        Ok(file) => file,
-    };
-    let mut s = String::new();
-
-    file.read_to_string(&mut s).unwrap() ;
-    let json = Json::from_str(&s).unwrap();
-
-    let result = format!("{} degree", json.find_path(&["current","temperature"]).unwrap());
-    result
+    // Wait for the server to complete serving or exit with an error.
+    // If an error occurred, print it to stderr.
+    if let Err(e) = serve_future.compat().await {
+        eprintln!("server error: {}", e);
+    }
 }
 
 fn main() {
-    rocket::ignite().mount("/", routes![hello]).launch();
+    // Set the address to run our socket on.
+    let addr = SocketAddr::from(([127, 0, 0, 1], 3000));
+
+    // Call our `run_server` function, which returns a future.
+    // As with every `async fn`, for `run_server` to do anything,
+    // the returned future needs to be run. Additionally,
+    // we need to convert the returned future from a futures 0.3 future into a
+    // futures 0.1 future.
+    let futures_03_future = run_server(addr);
+    let futures_01_future = futures_03_future.unit_error().boxed().compat();
+
+    // Finally, we can run the future to completion using the `run` function
+    // provided by Hyper.
+    run(futures_01_future);
 }
+
